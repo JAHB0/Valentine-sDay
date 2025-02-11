@@ -1,0 +1,24 @@
+@keyframes move {
+  0% {
+    left: 0;
+    transform: scaleX(1); /* Mirando a la derecha */
+  }
+  49% {
+    transform: scaleX(1); /* Mantiene mirando a la derecha antes de voltear */
+  }
+  50% {
+    left: calc(100% - 48px);
+    transform: scaleX(-1); /* Voltea para mirar a la izquierda */
+  }
+  99% {
+    transform: scaleX(-1); /* Mantiene mirando a la izquierda antes de voltear */
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1); /* Vuelve a mirar a la derecha */
+  }
+}
+
+.animate-move {
+  animation: move 4s linear infinite;
+}

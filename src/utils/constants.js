@@ -7,5 +7,5 @@ export const successMessage = '¡Genial! Nos vemos el Día de San Valentín. �
 export const noResponseMessageTitle = 'Lo siento... 😢';
 export const noResponseMessage = 'Bueno, no siempre se gana... pero valió la pena intentarlo. 😅';
 export const confirmDateBtn = 'Sí, acepto la cita 🥺'
-export const sunsetMessage1 = "¡Hola, Aby! ❤️ Como una estrella en el vasto universo, es genial verte aquí."
+export const sunsetMessage1 = "¡Hola, Mi niña! ❤️ Como una estrella en el vasto universo, es genial verte aquí."
 export const sunsetMessage2 = "Entre estrellas y ecuaciones, quizás encuentres la constante que le da sentido a todo."

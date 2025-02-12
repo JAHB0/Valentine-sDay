@@ -9,7 +9,7 @@ function Loading() {
     useEffect(() => {
         setTimeout(() => {
             setIsDecrypted(true)
-        }, 5000) //25000
+        }, 25000) //25000
     }, [])
 
 

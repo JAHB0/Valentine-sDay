@@ -1,2 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Aqila';
+    src: url('./fonts/Aqila-DemoVersion-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinionVariableConcept';
+    src: url('./fonts/MinionVariableConcept-Roman.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-aqila: "Aqila", "sans-serif";
+    --font-Minion: "MinionVariableConcept", "sans-serif";
+}

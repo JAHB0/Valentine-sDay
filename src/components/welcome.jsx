@@ -45,16 +45,16 @@ export default function Welcome() {
             {/* Mostrar el GIF si showGif es true */}
             {showGif && (
                 <>
-                <div className="w-80 h-16 overflow-hidden relative">
-                    <img
-                        src="./dog.gif"
-                        alt="Perrito corriendo"
-                        // className="size-12 object-cover rounded-lg"
-                        className="size-20 object-cover rounded-lg absolute animate-move"
-                    />
-                </div>
+                    <div className="w-80 h-16 overflow-hidden relative">
+                        <img
+                            src="./dog.gif"
+                            alt="Perrito corriendo"
+                            // className="size-12 object-cover rounded-lg"
+                            className="size-20 object-cover rounded-lg absolute animate-move"
+                        />
+                    </div>
 
-                <DecryptedText
+                    <DecryptedText
                         text="Aprendí que la curiosidad nos lleva más allá de las estrellas.
                         ¿Te gustaría acompañarme en una aventura el Día de San Valentín y explorar algo nuevo juntos?"
                         speed={150}
@@ -67,7 +67,7 @@ export default function Welcome() {
                         revealDirection="start"
                         animateOn="view"
                     />
-                
+
                 </>
             )}
 

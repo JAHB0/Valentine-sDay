@@ -1,0 +1,1 @@
+export const noBtn = ['No', 'Piensalo Bien!', '🥺'];

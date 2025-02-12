@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from './titleComponent';
 import { useNavigate } from 'react-router-dom';
+import { btnClickMessage, sunsetMessage1, sunsetMessage2 } from '../utils/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -775,7 +776,7 @@ function Sunset() {
                 {showClouds && (
                     <div className='text-split'>
                         <SplitText
-                            text="Hola mi niña ❤️❤️❤️"
+                            text={sunsetMessage1}
                             className="text-5xl font-Minion font-semibold  text-white text-center  Hola mi niña  mb-10 p-10 z-11"
                             delay={150}
                             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
@@ -791,7 +792,7 @@ function Sunset() {
                 {showNightSky && (
                     <div className='text-split'>
                         <SplitText
-                            text="San Valentín solo tiene sentido si lo paso contigo."
+                            text={sunsetMessage2}
                             className="text-4xl font-Minion font-semibold text-white text-center mb-10 p-10 z-11"
                             delay={150}
                             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
@@ -808,7 +809,7 @@ function Sunset() {
             <div class="scrollElement"></div>
             {showNightSky && (
                 <button className='btn' onClick={handleClick}>
-                    Clickea aqui
+                    {btnClickMessage}
                 </button>
             )}
 

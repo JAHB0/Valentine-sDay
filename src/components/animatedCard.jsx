@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { noBtn } from "../utils/constants";
+import { btnClickMessage, confirmDateBtn, noBtn, noResponseMessage, noResponseMessageTitle, questionMessage, successMessage, successMessageTitle } from "../utils/constants";
 
 const CardWithButtons = () => {
     const [showConfirmation, setShowConfirmation] = useState(false);
@@ -7,6 +7,7 @@ const CardWithButtons = () => {
     const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
     const [isNoButtonAbsolute, setIsNoButtonAbsolute] = useState(false);
     const [attempt, setAttempt] = useState(0);
+    const [dateConfirmation, setDateConfirmation] = useState(false);
 
     //Referencia del contenedor
     const containerRef = useRef(null)
@@ -58,6 +59,12 @@ const CardWithButtons = () => {
         setShowConfirmation(true);
     };
 
+    const handleSuccesDateBtn = () => {
+        alert('Debes regresar a esta pagina para descargar una sorpresa')
+        setDateConfirmation(true);
+        window.location.href = "https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3";
+    };
+
     return (
         <div className="bg-transparent p-8 rounded-lg shadow-lg text-center text-white">
             {!showConfirmation && !showNoResponse ? (
@@ -72,7 +79,7 @@ const CardWithButtons = () => {
                         </a>
                         <div class="p-5 m-5">
                             <a href="#">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-Minion">¿Me darías el honor de ser mi Valentín?</h5>
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-Minion">{questionMessage}</h5>
                             </a>
                         </div>
                         <div className="flex m-10 p-10 justify-around " ref={containerRef}>
@@ -109,11 +116,11 @@ const CardWithButtons = () => {
                         </a>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white font-Minion">¡Esta bien!</h5>
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white font-Minion">{noResponseMessageTitle}</h5>
                             </a>
 
                             <div class="flex flex-col items-center justify-between">
-                                <p className="text-lg mt-2 font-Minion">No siempre se obtiene lo que se quiere :( </p>
+                                <p className="text-lg mt-2 font-Minion">{noResponseMessage}</p>
                             </div>
                         </div>
                     </div>
@@ -129,15 +136,22 @@ const CardWithButtons = () => {
                         </a>
                         <div class="px-5 pb-5">
                             <a href="#">
-                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white font-Minion">¡Genial!</h5>
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white font-Minion">{successMessageTitle}</h5>
                             </a>
 
                             <div class="flex flex-col items-center justify-between">
-                                <p className="text-lg mt-2 font-Minion">Nos vemos el Día de San Valentín. 💖</p>
-                                <a href="src/assets/files/jahbo.pdf" download class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center
-        dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Da un click Aqui
-                                </a>
+                                <p className="text-lg mt-2 font-Minion">{successMessage}</p>
+                                <button onClick={handleSuccesDateBtn} href="https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3"
+                                    class="mt-5 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
+          dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700">
+                                    {confirmDateBtn}
+                                </button>
+
+                                {dateConfirmation && (
+                                    <a disabled={dateConfirmation ? true : false} href="src/assets/files/svday.pdf" download class={`mt-5 text-white ${!dateConfirmation ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300'} font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>
+                                        {btnClickMessage}
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>

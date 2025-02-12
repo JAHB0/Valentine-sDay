@@ -1,1 +1,11 @@
 export const noBtn = ['No', 'Piensalo Bien!', '🥺'];
+export const btnClickMessage = '🚀 ¡Haz clic aquí!';
+export const loadingMessage = 'Aprendí que la curiosidad nos lleva más allá de las estrellas ¿Te gustaría acompañarme en una aventura el Día de San Valentín y explorar algo nuevo juntos?';
+export const questionMessage = 'Dicen que el 14 de febrero es mejor acompañado… ¿Te animas?';
+export const successMessageTitle = '¡Genial!';
+export const successMessage = '¡Genial! Nos vemos el Día de San Valentín. 💖';
+export const noResponseMessageTitle = 'Lo siento... 😢';
+export const noResponseMessage = 'Bueno, no siempre se gana... pero valió la pena intentarlo. 😅';
+export const confirmDateBtn = 'Sí, acepto la cita 🥺'
+export const sunsetMessage1 = "¡Hola, Aby! ❤️ Como una estrella en el vasto universo, es genial verte aquí."
+export const sunsetMessage2 = "Entre estrellas y ecuaciones, quizás encuentres la constante que le da sentido a todo."

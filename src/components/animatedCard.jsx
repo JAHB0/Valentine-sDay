@@ -141,7 +141,7 @@ const CardWithButtons = () => {
 
                             <div class="flex flex-col items-center justify-between">
                                 <p className="text-lg mt-2 font-Minion">{successMessage}</p>
-                                <button onClick={handleSuccesDateBtn} href="https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3"
+                                <button onClick={handleSuccesDateBtn} href="https://api.whatsapp.com/send/?phone=593992924026&text=Si,%20acepto%20:3"
                                     class="mt-5 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
           dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700">
                                     {confirmDateBtn}

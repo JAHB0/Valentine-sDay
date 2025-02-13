@@ -62,7 +62,8 @@ const CardWithButtons = () => {
     const handleSuccesDateBtn = () => {
         alert('Debes regresar a esta pagina para descargar una sorpresa')
         setDateConfirmation(true);
-        window.location.href = "https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3";
+        // window.location.href = "https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3";
+        window.open("https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3", "_blank");
     };
 
     return (
@@ -141,14 +142,14 @@ const CardWithButtons = () => {
 
                             <div class="flex flex-col items-center justify-between">
                                 <p className="text-lg mt-2 font-Minion">{successMessage}</p>
-                                <button onClick={handleSuccesDateBtn} href="https://api.whatsapp.com/send/?phone=593992924026&text=Si,%20acepto%20:3"
+                                <button onClick={handleSuccesDateBtn}
                                     class="mt-5 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
           dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700">
                                     {confirmDateBtn}
                                 </button>
 
                                 {dateConfirmation && (
-                                    <a disabled={dateConfirmation ? true : false} href="src/assets/files/Valentine-sDay-NyA.png" download class={`mt-5 text-white ${!dateConfirmation ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300'} font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>
+                                    <a disabled={dateConfirmation ? true : false} href="/Valentine-sDay-NyA.pdf" download class={`mt-5 text-white ${!dateConfirmation ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300'} font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>
                                         {btnClickMessage}
                                     </a>
                                 )}

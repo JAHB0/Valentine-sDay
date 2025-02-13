@@ -63,7 +63,7 @@ const CardWithButtons = () => {
         alert('Debes regresar a esta pagina para descargar una sorpresa')
         setDateConfirmation(true);
         // window.location.href = "https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3";
-        window.open("https://api.whatsapp.com/send/?phone=593987977097&text=Si,%20acepto%20:3", "_blank");
+        window.open("https://api.whatsapp.com/send/?phone=593992924026&text=Si,%20acepto%20:3", "_blank");
     };
 
     return (
